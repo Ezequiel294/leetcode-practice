@@ -13,6 +13,7 @@ import sys
 # The function accepts STRING s as parameter.
 #
 
+
 def timeConversion(s):
     # Write your code here
     s_arr = list(s)
@@ -22,25 +23,25 @@ def timeConversion(s):
     tag = s_arr[8] + s_arr[9]
 
     if hour == "12" and tag == "AM":
-        return "00" + ':' + min + ':' + sec
+        return "00" + ":" + min + ":" + sec
 
     elif hour == "12" and tag == "PM":
-        return "12" + ':' + min + ':' + sec
+        return "12" + ":" + min + ":" + sec
 
     elif tag == "PM":
-            hour = str(int(hour) + 12)
-            return hour +':' + min + ':' + sec
+        hour = str(int(hour) + 12)
+        return hour + ":" + min + ":" + sec
     else:
-        return hour +':' + min + ':' + sec
+        return hour + ":" + min + ":" + sec
 
 
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+if __name__ == "__main__":
+    fptr = open(os.environ["OUTPUT_PATH"], "w")
 
     s = input()
 
     result = timeConversion(s)
 
-    fptr.write(result + '\n')
+    fptr.write(result + "\n")
 
     fptr.close()

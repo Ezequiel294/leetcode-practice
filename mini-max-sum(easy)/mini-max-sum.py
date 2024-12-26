@@ -12,6 +12,7 @@ import sys
 # The function accepts INTEGER_ARRAY arr as parameter.
 #
 
+
 def miniMaxSum(arr):
     # Write your code here
     min_num = min(arr)
@@ -38,7 +39,7 @@ def miniMaxSum(arr):
     print(f"{min_sum} {max_sum}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
     arr = list(map(int, input().rstrip().split()))
 
