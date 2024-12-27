@@ -18,20 +18,16 @@ import string
 def pangrams(s):
     # Write your code here
     letters_arr = list(string.ascii_lowercase + ' ')
-    freq_arr = [0] * len(letters_arr)
     arr_s = list(s)
 
     for i in range(len(arr_s)):
         arr_s[i] = arr_s[i].lower()
 
-    for i in range(len(letters_arr)):
-        if letters_arr[i] in arr_s:
-            freq_arr[i] += 1
+    for letter in letters_arr:
+        if letter not in arr_s:
+            return "not pangram"
 
-    if 0 in freq_arr:
-        return "not pangram"
-    else:
-        return "pangram"
+    return "pangram"
 
 
 if __name__ == '__main__':
