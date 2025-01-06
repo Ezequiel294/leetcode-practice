@@ -36,11 +36,6 @@ def pageCount(n, p):
         if p == 1 or p == n or p == n-1:
             return 0
 
-    """
-    1 2,3 4,5 6,7 mid=3.5
-    1 2,3 4,5 6   mid = 3
-    """
-
     if p <= mid:
         return int(p/2)
     else:
