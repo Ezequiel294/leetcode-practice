@@ -16,6 +16,7 @@ class Solution:
             for j in range(zeros[i] - 1, -1, -1):
                 if nums[j] > (zeros[i] - j):
                     passes = 1
+                    continue
             if passes == 0:
                 return False
 
